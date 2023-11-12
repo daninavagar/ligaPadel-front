@@ -19,7 +19,7 @@ function Players() {
             {
                 players ? 
                 (
-                    players.map((player) => {
+                    players.map((player: { id: number, name: string }) => {
                         return (
                           <div key={player.id}>
                             <p>{player.name}</p>
