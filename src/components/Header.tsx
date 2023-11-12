@@ -1,21 +1,37 @@
+import React from "react"
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Image } from "@nextui-org/react"
+import { useNavigate } from "react-router-dom"
 import ImageLogo from '../assets/img/padel.png'
 function Header() {
 
+  const navigate = useNavigate()
+  function clickHandler() {
+    navigate('/')
+  }
   return (
-    <Navbar maxWidth="full" className="bg-inherit w-max">
-      <Image
+    <Navbar maxWidth="full" className="bg-inherit">
+      <NavbarBrand className="cursor-pointer" onClick={clickHandler}>
+        <Image
         src={ImageLogo}
         alt='Padel Logo'
         width={50}
         height={50}
-      />
-      <NavbarBrand>TUKI LEAGUE</NavbarBrand>
+        /> 
+        TUKI LEAGUE
+      </NavbarBrand>
       <NavbarContent justify='center'>
-        <NavbarItem isActive>Clasificación</NavbarItem>
-        <NavbarItem>Jornadas</NavbarItem>
-        <NavbarItem>Equipos</NavbarItem>
-        <NavbarItem>Jugadores</NavbarItem>
+        <NavbarItem isActive>
+          <Link className="color-link" href="/clasification">Clasificación</Link>
+        </NavbarItem>
+        <NavbarItem>
+        <Link className="color-link" href="/round">Jornadas</Link>
+        </NavbarItem>
+        <NavbarItem>
+        <Link className="color-link" href="/teams">Equipos</Link>
+        </NavbarItem>
+        <NavbarItem>
+        <Link className="color-link" href="/players">Jugadores</Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">

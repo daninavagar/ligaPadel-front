@@ -18,6 +18,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.color-link {
+  color: #FFFFFF;
+}
+
 /* body {
   margin: 0;
   display: flex;

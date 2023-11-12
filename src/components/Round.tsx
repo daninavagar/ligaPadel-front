@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Image } from "@nextui-org/image";
 import { Tabs, Tab } from "@nextui-org/tabs";
@@ -14,8 +15,8 @@ function Round() {
   }, []);
 
   return (
-    <div>
-      <Tabs>
+    <div className="mt-2 grid justify-center">
+      <Tabs className="mt-2 grid justify-center">
         {
           roundImages.map((image, index) => {
             return (
