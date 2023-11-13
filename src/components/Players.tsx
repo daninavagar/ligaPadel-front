@@ -10,24 +10,27 @@ function Players() {
     useEffect(() => {
         getPlayers()
             .then((players) => {
-                console.log(players);
                 setPlayers(players)
             })
     }, [])
     return (
         <div className="mt-3 grid justify-center">
             {
-                players ? 
-                (
-                    players.map((player: { id: number, name: string }) => {
-                        return (
-                          <div key={player.id}>
-                            <p>{player.name}</p>
-                          </div>
-                        )
-                      })
-                ) : (
-                    <Spinner/>
+                players ? (
+                    Array.isArray(players) ? 
+                    (
+                        players.map((player: { id: number, name: string }) => {
+                            return (
+                              <div key={player.id}>
+                                <p>{player.name}</p>
+                              </div>
+                            )
+                          })
+                    ) : (
+                        <Spinner/>
+                    )
+                )  : (
+                    <span>{players}</span>
                 )
             }
         </div>

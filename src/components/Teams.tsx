@@ -19,23 +19,32 @@ function Teams() {
 
             {
                 teams ? (
-                    Object.keys(teams).map((teamName) => {
-                        const team = teams[teamName];
-                        return (
-                            <Card key={teamName} className='mt-5 bg-gray-400' radius='md' fullWidth={true} shadow='sm'>
-                                <CardHeader className=' justify-center text-3xl font-semibold'>{teamName}</CardHeader>
-                                <Divider/>
-                                <CardBody className='text-center'>
-                                {
-                                    team.jugadores.map((player: any) => <span key={player.nombre}>{player.nombre}</span>)
-                                }
-                                </CardBody>
-                            </Card>
-                        )
-                    })
+
+                    Array.isArray(teams) ?
+                    (
+                        Object.keys(teams).map((teamName) => {
+                            const team = teams[teamName];
+                            return (
+                                <Card key={teamName} className='mt-5 bg-gray-400' radius='md' fullWidth={true} shadow='sm'>
+                                    <CardHeader className=' justify-center text-3xl font-semibold'>{teamName}</CardHeader>
+                                    <Divider/>
+                                    <CardBody className='text-center'>
+                                    {
+                                        team.jugadores.map((player: any) => <span key={player.nombre}>{player.nombre}</span>)
+                                    }
+                                    </CardBody>
+                                </Card>
+                            )
+                        })
+                    ) : (
+                        <Spinner/>
+                    )
                 ) : (
-                    <Spinner/>
+                    <span>{teams}</span>
                 )
+
+                    
+
             } 
         </div>
     );

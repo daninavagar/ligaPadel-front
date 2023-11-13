@@ -1,52 +1,55 @@
-import supabase from "../plugins/supabase";
+// import supabase from "../plugins/supabase";
 
 export const getTeams = async () => {
 
-    const { data, error } = await supabase
-        .from('teams')
-        .select('*')
+    // const { data, error } = await supabase
+    //     .from('teams')
+    //     .select('*')
     
-    if (error) return error
+    // if (error) return error
 
-    return data
+    // return data
+    return 'No hay equipos encontrados'
 }
 
 export const getPlayers = async () => {
     
-    const { data, error } = await supabase
-        .from('players')
-        .select('*')
-    if (error) return error
+    // const { data, error } = await supabase
+    //     .from('players')
+    //     .select('*')
+    // if (error) return error
     
-    return data
+    // return data
+    return 'No hay jugadores encontrados'
 }
 
 export const getTeamsPlayers = async () => {
 
-    const teams = await getTeams()
-    const players = await getPlayers()
-    const teamsWithPlayers: {[key: string]: {jugadores: Array<{nombre: string}>}} = {}
+    // const teams = await getTeams()
+    // const players = await getPlayers()
+    // const teamsWithPlayers: {[key: string]: {jugadores: Array<{nombre: string}>}} = {}
 
-    const { data, error } = await supabase
-        .from('player_teams')
-        .select('*')
-    if (error) return error;
+    // const { data, error } = await supabase
+    //     .from('player_teams')
+    //     .select('*')
+    // if (error) return error;
 
-    const teams_players = data
+    // const teams_players = data
 
-    teams_players.map((playerTeam) => {
-        const team = (teams as Array<any>)?.find(team => team.id === playerTeam.team_id)
-        const player = (players as Array<any>)?.find(player => player.id === playerTeam.player_id)
+    // teams_players.map((playerTeam) => {
+    //     const team = (teams as Array<any>)?.find(team => team.id === playerTeam.team_id)
+    //     const player = (players as Array<any>)?.find(player => player.id === playerTeam.player_id)
 
-        if (!team) return;
+    //     if (!team) return;
 
-        if (!teamsWithPlayers[team.name]) {
-            teamsWithPlayers[team.name] = { jugadores: [] };
-        }
+    //     if (!teamsWithPlayers[team.name]) {
+    //         teamsWithPlayers[team.name] = { jugadores: [] };
+    //     }
 
-        // Añadimos el jugador al equipo
-        teamsWithPlayers[team.name].jugadores.push({ nombre: player?.name || '' });
-    })
+    //     // Añadimos el jugador al equipo
+    //     teamsWithPlayers[team.name].jugadores.push({ nombre: player?.name || '' });
+    // })
     
-    return teamsWithPlayers;
+    // return teamsWithPlayers;
+    return 'No hay jugadores con equipos encontrados'
 }
