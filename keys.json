@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "supple-student-292911",
+  "private_key_id": "7930370ff56d80852d0cfac1e69fb9a1679f6c7f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCArHiMuOTiUXed\nCqKfB6PXwZthZflmts9+LswrVy9Mgj91N7AH5cVEtJVRhOxO5A1eK3gkSyNFk47e\ns3ZmHSVdyES+RZzNw+XJFjrnkJxX+xVOglFsNC/05kehRjBWeBUGBqGJf7LMQvK5\nhiHzFBOGK+niOIKjJc/Eo7m12HgmIaqccnnPPmgtzyNa2QVhdZleys1/VknLj8DL\niACYiHCu0wOZJqAUbwMzMOuJSSeeLkM1gh6lUUIFEPXhLZ+gOrh21puwnFvkfTMF\nQIv79S6Mk04H1bknyC0hr4wIb5US97Frxhvbdm+GeGUr2ZD5+sTtidoxAGJ1Ba75\nfSedUFgJAgMBAAECggEAFsDo7FGBv/eSBEYuLZsHQQ7ucBG9QYmQNYsG9Z8MMSZT\nHGJFkY/zC0w3n1u3AdhX+NANBbX3vcTzHbR0emgrBGN2rILY0JYUmzOAJRSwYOp4\ngRKQXWb5GABkqEMmJxRC+3bOt+bJ8k7gZygt9rMVJMO9LxC5ISp9jBM7ssldrbhE\nJ8y+pHnoZ4U7RRt/U4NI193Xz0FJfXzdHoDEADQIWf3W9iWlXia1dVtZtqSarGI6\ncV2oKIZcp6MGZXcFvT+ifp2qD1v2IVqM1XFABRHfimhEuPvh+Zcyp1LP0C/CY4Ly\n/gCCF5OoqKUVIpGhNrvy155h+Z1xpPKjtKu1yBTqEQKBgQC1zTdG214kOd37vaHn\ndWiOLeJgQRJlQLxqjKkJKAXLa2CJVp+lmKl43nJtBB/klt40S5ZWzncQBSAzD/7y\niw9Hlr7mYFzwJY3KzALX2LWFAMdOvP5yZyri2LUti8ve0CKT5fpZgD+svdaxL0F3\nAylvYGkkoSpWEbtnGzhHF/nY5QKBgQC1MGgvuP6IAKExoq042XW4Tm1OAYQMJ4uv\nl1f2xwkpLxN4S049fJZXxAmN32+F2c9HJDx2p6J7B2+fZWshtiFwmtCsnAmqUdFt\nTe/7K/n/0rWu/Wyr3pvTrD1jCZUkWeiyrMBhfXsaE4tUstGsK1Jkj1TwUjIuAAMG\nvYXKD1zEVQKBgH2ScJLVpLHa8nQWaIUp+Hz0Pn+DksQzMbFa1MrJRS9bTIOwPHcx\n+iTNaTXZenn2pyZx6zasR1reX35FlzBKUtR80ADqIGeTWNvxjCkwuzhR8Fh3fDzi\n+6FSU9pQzBFrq+aCHCjDx7d2LJuX61zb5zvR2O3/D/IBL3MpPvcEHYPtAoGAP8MM\nNxccA5JtJ4F/Ag2M3tJCpvvjkz9radyRqRd8AtE9Qc0GeJ7abYJgdlvV7D2tMvTu\njjcJ98+zGV3gaJmmhPEGVGgJArYORC/0LujX7o4hP7aRQp5xKfloFO0vXf6B5Dbk\n8Knu40tTcfgHz1Xjhd3m3zedzxBUAFA7v9LOK40CgYA6evw1Ky1UkUQwfqx9ZpNW\n91pGuQSTA4aTv3GqlAK4iQj2/uBdZGAV+lJmhclmGxtFkBG1YjEEWJnx7HvULcRH\nxlRrRL7j3U+S1ijq2mb0/2tLIMqOscwVkdHROx/7bshmTxPcnPaNnK/DPmHCN6H1\nFT4incibin2a/oBGBD56Tg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "excelpadel@supple-student-292911.iam.gserviceaccount.com",
+  "client_id": "103981458111586609719",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/excelpadel%40supple-student-292911.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
