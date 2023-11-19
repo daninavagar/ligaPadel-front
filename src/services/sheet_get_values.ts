@@ -1,31 +1,99 @@
-import { GoogleAuth } from 'google-auth-library'
-import { google } from 'googleapis'
-/**
-* Gets cell values from a Spreadsheet.
-* @param {string} spreadsheetId The spreadsheet ID.
-* @param {string} range The sheet range.
-* @return {obj} spreadsheet information
-*/
-export async function getValues(spreadsheetId, range) {
+export async function getValues() {
 
     
-//     const auth = new GoogleAuth({
-//    scopes: 'https://www.googleapis.com/auth/spreadsheets',
-//  });
+    // const response = await fetch('https://sheetdb.io/api/v1/mgupcu6878cfj?sheet=Clasificación')
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         return data;
+    //     });
 
-//  return auth
+    // const transformedRowsResponse = response.map((item:any, index:any) => ({
+    //     key: String(index + 1),
+    //     equipos: item.EQUIPOS,
+    //     puntos: item.PUNTOS,
+    //     ganados: item.GANADOS,
+    //     'juegos ganados': item['JUEGOS GANADOS'],
+    //     }));
 
-//  const service = google.sheets({version: 'v4', auth});
-//  try {
-//    const result = await service.spreadsheets.values.get({
-//      spreadsheetId,
-//      range,
-//    });
-//    const numRows = result.data.values ? result.data.values.length : 0;
-//    console.log(`${numRows} rows retrieved.`);
-//    return result;
-//  } catch (err) {
-//    // TODO (developer) - Handle exception
-//    throw err;
-//  }
+    const a = [
+        {
+            "key": "1",
+            "equipos": "Mamen",
+            "puntos": "2",
+            "ganados": "2",
+            "juegos ganados": "6"
+        },
+        {
+            "key": "2",
+            "equipos": "Percutidores",
+            "puntos": "2",
+            "ganados": "2",
+            "juegos ganados": "4"
+        },
+        {
+            "key": "3",
+            "equipos": "Tetinhos",
+            "puntos": "1",
+            "ganados": "1",
+            "juegos ganados": "4"
+        },
+        {
+            "key": "4",
+            "equipos": "Maularen",
+            "puntos": "1",
+            "ganados": "1",
+            "juegos ganados": "3"
+        },
+        {
+            "key": "5",
+            "equipos": "Waffen-SS",
+            "puntos": "1",
+            "ganados": "1",
+            "juegos ganados": "2"
+        },
+        {
+            "key": "6",
+            "equipos": "Entrenadorrrr A",
+            "puntos": "0",
+            "ganados": "0",
+            "juegos ganados": "1"
+        },
+        {
+            "key": "7",
+            "equipos": "Ramoncin y Perroviejo",
+            "puntos": "0",
+            "ganados": "0",
+            "juegos ganados": "1"
+        },
+        {
+            "key": "8",
+            "equipos": "Tom Y Jerry",
+            "puntos": "0",
+            "ganados": "0",
+            "juegos ganados": "0"
+        }
+    ]
+
+        const columnsResponse = [
+            {
+                key: "equipos",
+                label: "EQUIPOS",
+            },
+            {
+                key: "puntos",
+                label: "PUNTOS",
+            },
+            {
+                key: "ganados",
+                label: "GANADOS",
+            },
+            {
+                key: "juegos ganados",
+                label: "JUEGOS GANADOS",
+            }
+          ];
+    const transformedRowsResponse = a
+        
+    
+    return { transformedRowsResponse, columnsResponse};
 }

@@ -16,7 +16,8 @@
     "google-auth-library": "^9.2.0",
     "googleapis": "^105.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sheetdb-node": "^0.0.12"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
