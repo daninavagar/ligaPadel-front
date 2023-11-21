@@ -4,13 +4,14 @@ import { Tabs, Tab } from "@nextui-org/tabs";
 import round_1 from "../assets/img/round_1.png";
 import round_2 from "../assets/img/round_2.png";
 import round_3 from "../assets/img/round_3.png";
+import round_4 from "../assets/img/round_4.png";
 function Round() {
 
   
   const [roundImages, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    setImages([round_1, round_2, round_3]);
+    setImages([round_1, round_2, round_3, round_4]);
   }, []);
 
   return (
