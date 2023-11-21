@@ -22,13 +22,14 @@
   color: #FFFFFF;
 }
 
-/* body {
+body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: auto;
-} */
+  margin-top: 40px;
+}
 
 /* button {
   border-radius: 8px;

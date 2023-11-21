@@ -11,7 +11,7 @@ function Round() {
   const [roundImages, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    setImages([round_1, round_2, round_3]);
+    setImages([round_1, round_2, round_3,round_1, round_2, round_3,round_1, round_2, round_3]);
   }, []);
 
   return (
