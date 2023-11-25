@@ -26,7 +26,7 @@ function Players() {
         const fetchPlayers = async () => {
             const newPlayers = await getPlayers();
             setPlayers(newPlayers);
-            console.log(newPlayers);
+            console.log(players);
             
         };
 
@@ -34,7 +34,6 @@ function Players() {
     }, [])
     return (
         <div className="mt-3 grid justify-center">
-          { players }
         </div>
     )
 }

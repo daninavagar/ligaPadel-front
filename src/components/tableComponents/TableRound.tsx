@@ -13,14 +13,14 @@ const TableRound = ({ roundParameter }: { roundParameter: number }) => {
         const fetchRound = async () => {
             const newRound = await getRound(roundParameter);
             setRound(newRound);
-            console.log(newRound);
+            console.log(round);
         }
 
         fetchRound()
     },[])
     return (
         <div>
-        <h2>{round}</h2>
+        {/* <h2>{round}</h2> */}
         </div>
     );
 }
