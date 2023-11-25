@@ -1,55 +1,252 @@
-// import supabase from "../plugins/supabase";
+import axios from 'axios'
 
 export const getTeams = async () => {
 
-    // const { data, error } = await supabase
-    //     .from('teams')
-    //     .select('*')
-    
-    // if (error) return error
+    const url = `${import.meta.env.VITE_APP_URL_BACK}teams`
 
-    // return data
-    return 'No hay equipos encontrados'
+    const options = {
+        method: 'GET',
+        url: url
+    }
+
+    let result = [
+        {
+            "EQUIPOS": "Mamen"
+        },
+        {
+            "EQUIPOS": "Percutidores"
+        },
+        {
+            "EQUIPOS": "Tetinhos"
+        },
+        {
+            "EQUIPOS": "Maularen"
+        },
+        {
+            "EQUIPOS": "Waffen-SS"
+        },
+        {
+            "EQUIPOS": "Entrenadorrrr A"
+        },
+        {
+            "EQUIPOS": "Ramoncin y Perroviejo"
+        },
+        {
+            "EQUIPOS": "Tom Y Jerry"
+        }
+    ]
+    
+    // await axios.request(options)
+    //     .then((response) => {
+    //         console.log(response.data)
+    //         result = response.data
+    //     })
+    //     .catch((error) => {
+    //         result = error 
+    //         console.error(error)
+    //     })
+    
+    return result
+    
+
 }
 
 export const getPlayers = async () => {
     
-    // const { data, error } = await supabase
-    //     .from('players')
-    //     .select('*')
-    // if (error) return error
+    const url = `${import.meta.env.VITE_APP_URL_BACK}players`
+
+    const options = {
+        method: 'GET',
+        url: url
+    }
+
+    let result = [
+        {
+            "JUGADORES": "Jesús Alberto",
+            "EQUIPOS": "Maularen",
+            "CAPITAN": "1"
+        },
+        {
+            "JUGADORES": "Daniel Navarro",
+            "EQUIPOS": "Maularen",
+            "CAPITAN": "0"
+        },
+        {
+            "JUGADORES": "Alberto Pérez Durán",
+            "EQUIPOS": "Tetinhos",
+            "CAPITAN": "1"
+        },
+        {
+            "JUGADORES": "Alberto Pérez",
+            "EQUIPOS": "Tetinhos",
+            "CAPITAN": "0"
+        },
+        {
+            "JUGADORES": "Óscar Vela",
+            "EQUIPOS": "Mamen",
+            "CAPITAN": "1"
+        },
+        {
+            "JUGADORES": "Daniel Egido",
+            "EQUIPOS": "Mamen",
+            "CAPITAN": "0"
+        },
+        {
+            "JUGADORES": "Rueda",
+            "EQUIPOS": "Percutidores",
+            "CAPITAN": "1"
+        },
+        {
+            "JUGADORES": "Sergi",
+            "EQUIPOS": "Percutidores",
+            "CAPITAN": "0"
+        },
+        {
+            "JUGADORES": "Nacho",
+            "EQUIPOS": "Waffen SS",
+            "CAPITAN": "1"
+        },
+        {
+            "JUGADORES": "M. Navarro",
+            "EQUIPOS": "Waffen SS",
+            "CAPITAN": "0"
+        },
+        {
+            "JUGADORES": "Antón",
+            "EQUIPOS": "Tom y Jerry",
+            "CAPITAN": "1"
+        },
+        {
+            "JUGADORES": "Jorge",
+            "EQUIPOS": "Tom y Jerry",
+            "CAPITAN": "0"
+        },
+        {
+            "JUGADORES": "Jaime",
+            "EQUIPOS": "Ramoncin y Perroviejo",
+            "CAPITAN": "1"
+        },
+        {
+            "JUGADORES": "Tapia",
+            "EQUIPOS": "",
+            "CAPITAN": "0"
+        },
+        {
+            "JUGADORES": "Icíar",
+            "EQUIPOS": "Entrenadorrrr A 🫡\n",
+            "CAPITAN": "1"
+        },
+        {
+            "JUGADORES": "Jose Mari",
+            "EQUIPOS": "Entrenadorrrr A 🫡\n",
+            "CAPITAN": "0"
+        }
+    ]
     
-    // return data
-    return 'No hay jugadores encontrados'
+    // await axios.request(options)
+    //     .then((response) => {
+    //         result = response.data
+    //     })
+    //     .catch((error) => {
+    //         result = error 
+    //         console.error(error)
+    //     })
+    
+    return result
 }
 
-export const getTeamsPlayers = async () => {
+const resultsRound = [
+    {
+        "Partido 1": [
+            {
+                "EQUIPOS": "Entrenadorrrr A",
+                "JUEGOS GANADOS": null,
+                "PUNTOS": null
+            },
+            {
+                "EQUIPOS": "Tom Y Jerry",
+                "JUEGOS GANADOS": null,
+                "PUNTOS": null
+            }
+        ]
+    },
+    {
+        "Partido 2": [
+            {
+                "EQUIPOS": "Waffen-SS",
+                "JUEGOS GANADOS": "0",
+                "PUNTOS": "0"
+            },
+            {
+                "EQUIPOS": "Mamen",
+                "JUEGOS GANADOS": "3",
+                "PUNTOS": "1"
+            }
+        ]
+    },
+    {
+        "Partido 3": [
+            {
+                "EQUIPOS": "Maularen",
+                "JUEGOS GANADOS": "3",
+                "PUNTOS": "1"
+            },
+            {
+                "EQUIPOS": "Ramoncin y Perroviejo",
+                "JUEGOS GANADOS": "0",
+                "PUNTOS": "0"
+            }
+        ]
+    },
+    {
+        "Partido 4": [
+            {
+                "EQUIPOS": "Tetinhos",
+                "JUEGOS GANADOS": "1",
+                "PUNTOS": "0"
+            },
+            {
+                "EQUIPOS": "Percutidores",
+                "JUEGOS GANADOS": "2",
+                "PUNTOS": "1"
+            }
+        ]
+    }
+]
 
-    // const teams = await getTeams()
-    // const players = await getPlayers()
-    // const teamsWithPlayers: {[key: string]: {jugadores: Array<{nombre: string}>}} = {}
+export const getRound = async (numberRound:number) => {
 
-    // const { data, error } = await supabase
-    //     .from('player_teams')
-    //     .select('*')
-    // if (error) return error;
+    // const url = `${import.meta.env.VITE_APP_URL_BACK}round`
+    // const params = { round: getNameRound(numberRound) || '' }
 
-    // const teams_players = data
+    let result = resultsRound
 
-    // teams_players.map((playerTeam) => {
-    //     const team = (teams as Array<any>)?.find(team => team.id === playerTeam.team_id)
-    //     const player = (players as Array<any>)?.find(player => player.id === playerTeam.player_id)
+    // try {
+    //     const response = await axios.get(url, { params })
+    //     result = response.data
+    // } catch (error) {
+    //     result = error
+    //     console.error('There was a problem with the axios request: ', error)
+    // }
 
-    //     if (!team) return;
+    return result
+}
 
-    //     if (!teamsWithPlayers[team.name]) {
-    //         teamsWithPlayers[team.name] = { jugadores: [] };
-    //     }
-
-    //     // Añadimos el jugador al equipo
-    //     teamsWithPlayers[team.name].jugadores.push({ nombre: player?.name || '' });
-    // })
-    
-    // return teamsWithPlayers;
-    return 'No hay jugadores con equipos encontrados'
+const getNameRound = (numberRound:number) => { 
+    switch (numberRound) {
+        case 1:
+            return 'Jornada 1'
+        case 2:
+            return 'Jornada 2'
+        case 3:
+            return 'Jornada 3'
+        case 4:
+            return 'Jornada 4'
+        case 5:
+            return 'Jornada 5'
+        case 6:
+            return 'Jornada 6'
+        case 7:
+            return 'Jornada 7'
+    }
 }

@@ -7,32 +7,33 @@ function Players() {
 
     const [players, setPlayers] = useState<any>()
 
+    const columns = [
+        {
+          key: "EQUIPOS",
+          label: "EQUIPOS",
+        },
+        {
+          key: "JUGADORES",
+          label: "JUGADORES",
+        },
+        {
+          key: "CAPITAN",
+          label: "CAPITAN",
+        }
+      ];
+
     useEffect(() => {
-        getPlayers()
-            .then((players) => {
-                setPlayers(players)
-            })
+        const fetchPlayers = async () => {
+            const newPlayers = await getPlayers();
+            setPlayers(newPlayers);
+            console.log(newPlayers);
+            
+        };
+
+        fetchPlayers();
     }, [])
     return (
         <div className="mt-3 grid justify-center">
-            {
-                players ? (
-                    Array.isArray(players) ? 
-                    (
-                        players.map((player: { id: number, name: string }) => {
-                            return (
-                              <div key={player.id}>
-                                <p>{player.name}</p>
-                              </div>
-                            )
-                          })
-                    ) : (
-                        <Spinner/>
-                    )
-                )  : (
-                    <span>{players}</span>
-                )
-            }
         </div>
     )
 }

@@ -1,25 +1,27 @@
+import axios from 'axios'
+
 const getClasification = async () => {
 
-    const url = 'https://sheet.best/api/sheets/b2fe4122-5548-41c5-8ce4-d25d08220ae3?raw=Clasificación'
-    const headers = {
-        'X-Api-Key': 's_FqokQ2xLeFyauGdFJ#TmwBhN_Li#FRa%IcA%rDosp@4nmWQ_23v-3xzK1%w0Bw'
+    const url = `${import.meta.env.VITE_APP_URL_BACK}clasification`
+
+    const options = {
+        method: 'GET',
+        url: url
     }
-
-    const result = await fetch(url,{headers: headers})
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            return data;
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-
-    const resultFormated = resultsFormated(result)
+    // let result
+    // await axios.request(options)
+    //     .then((response) => {
+    //         debugger;
+    //         console.log(response.data);
+    //         result = response.data;
+    //     })
+    //     .catch((error) => {
+    //         result = error 
+    //         console.error(error)
+    //     })
+    
+    const resultFormated = resultsFormated(result2)
     const resultFormatedToTable = resultsFormatedToTable(resultFormated)
-
-
-
 
     return resultFormatedToTable;
 
@@ -44,8 +46,7 @@ const resultsFormatedToTable = ((format:any) => {
       }));
 })
 
-
-const results = [
+const result2 = [
     {
         "3": "",
         "EQUIPOS": "Mamen",
