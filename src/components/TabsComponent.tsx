@@ -1,6 +1,6 @@
 import React from "react"
 // tslint:disable-next-line: no-unused-variable
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Image, Tabs , Tab } from "@nextui-org/react"
+import { /* Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Image,*/ Tabs , Tab } from "@nextui-org/react"
 import Clasification from "./Clasification"
 import Round from "./Round"
 import Teams from "./Teams"

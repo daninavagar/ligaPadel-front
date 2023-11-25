@@ -1,9 +1,9 @@
 import React from "react";
-import { Image } from "@nextui-org/image";
-import clasificationImage from '../assets/img/clasification.png'
+// import { Image } from "@nextui-org/image";
+// import clasificationImage from '../assets/img/clasification.png'
 import { useState, useEffect } from "react";
 import getClasification from "../services/getClasification";
-import TableClasification from "./tableComponents/TableClasification";
+import TableClasification from "./TableClasification";
 
 
 function Clasification() {

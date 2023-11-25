@@ -1,12 +1,12 @@
 import React from "react";
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue} from "@nextui-org/react";
 
-interface TablePlayersProps {
+interface TableClasificationProps {
   columns: any;
   rows: any;
 }
 
-export default function TablePlayers({columns,rows}: TablePlayersProps) {
+export default function TableClasification({columns,rows}: TableClasificationProps) {
   return (
     <Table aria-label="Example table with dynamic content">
     <TableHeader columns={columns}>
@@ -15,11 +15,12 @@ export default function TablePlayers({columns,rows}: TablePlayersProps) {
     <TableBody items={rows}>
       {(item: any) => (
         <TableRow key={item.key}>
-          {(columnKey: any) => <TableCell className="text-black">{getKeyValue(item, columnKey)}</TableCell>}
+          {(column: any) => <TableCell className="text-black">{getKeyValue(item, column)}</TableCell>}
         </TableRow>
       )}
     </TableBody>
   </Table>
   );
 }
-    
+         
+

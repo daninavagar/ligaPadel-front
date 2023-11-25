@@ -20,7 +20,7 @@ const TableRound = ({ roundParameter }: { roundParameter: number }) => {
     },[])
     return (
         <div>
-        {/* <h2>{round}</h2> */}
+        <h2>{round}</h2>
         </div>
     );
 }

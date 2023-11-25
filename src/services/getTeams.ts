@@ -1,13 +1,13 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 export const getTeams = async () => {
 
-    const url = `${import.meta.env.VITE_APP_URL_BACK}teams`
+    // const url = `${import.meta.env.VITE_APP_URL_BACK}teams`
 
-    const options = {
-        method: 'GET',
-        url: url
-    }
+    // const options = {
+    //     method: 'GET',
+    //     url: url
+    // }
 
     let result = [
         {
@@ -53,12 +53,12 @@ export const getTeams = async () => {
 
 export const getPlayers = async () => {
     
-    const url = `${import.meta.env.VITE_APP_URL_BACK}players`
+    // const url = `${import.meta.env.VITE_APP_URL_BACK}players`
 
-    const options = {
-        method: 'GET',
-        url: url
-    }
+    // const options = {
+    //     method: 'GET',
+    //     url: url
+    // }
 
     let result = [
         {
@@ -218,7 +218,7 @@ export const getRound = async (numberRound:number) => {
 
     // const url = `${import.meta.env.VITE_APP_URL_BACK}round`
     // const params = { round: getNameRound(numberRound) || '' }
-
+    console.log(numberRound);
     let result = resultsRound
 
     // try {
@@ -232,21 +232,21 @@ export const getRound = async (numberRound:number) => {
     return result
 }
 
-const getNameRound = (numberRound:number) => { 
-    switch (numberRound) {
-        case 1:
-            return 'Jornada 1'
-        case 2:
-            return 'Jornada 2'
-        case 3:
-            return 'Jornada 3'
-        case 4:
-            return 'Jornada 4'
-        case 5:
-            return 'Jornada 5'
-        case 6:
-            return 'Jornada 6'
-        case 7:
-            return 'Jornada 7'
-    }
-}
+// const getNameRound = (numberRound:number) => { 
+//     switch (numberRound) {
+//         case 1:
+//             return 'Jornada 1'
+//         case 2:
+//             return 'Jornada 2'
+//         case 3:
+//             return 'Jornada 3'
+//         case 4:
+//             return 'Jornada 4'
+//         case 5:
+//             return 'Jornada 5'
+//         case 6:
+//             return 'Jornada 6'
+//         case 7:
+//             return 'Jornada 7'
+//     }
+// }

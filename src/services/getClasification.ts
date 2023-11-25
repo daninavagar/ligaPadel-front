@@ -1,13 +1,13 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 const getClasification = async () => {
 
-    const url = `${import.meta.env.VITE_APP_URL_BACK}clasification`
+    // const url = `${import.meta.env.VITE_APP_URL_BACK}clasification`
 
-    const options = {
-        method: 'GET',
-        url: url
-    }
+    // const options = {
+    //     method: 'GET',
+    //     url: url
+    // }
     // let result
     // await axios.request(options)
     //     .then((response) => {
