@@ -1,26 +1,33 @@
-// import axios from 'axios'
+import axios from 'axios'
 
 const getClasification = async () => {
 
-    // const url = `${import.meta.env.VITE_APP_URL_BACK}clasification`
+    let result:any = []
+    if (import.meta.env.VITE_ENVIROMENT === 'dev') {
+       result = result2
+    } else {
 
-    // const options = {
-    //     method: 'GET',
-    //     url: url
-    // }
-    // let result
-    // await axios.request(options)
-    //     .then((response) => {
-    //         debugger;
-    //         console.log(response.data);
-    //         result = response.data;
-    //     })
-    //     .catch((error) => {
-    //         result = error 
-    //         console.error(error)
-    //     })
+        const url = `${import.meta.env.VITE_APP_URL_BACK}clasification`
     
-    const resultFormated = resultsFormated(result2)
+        const options = {
+            method: 'GET',
+            url: url
+        }
+        let result
+        await axios.request(options)
+            .then((response) => {
+                debugger;
+                console.log(response.data);
+                result = response.data;
+            })
+            .catch((error) => {
+                result = error 
+                console.error(error)
+            })
+    }
+
+    
+    const resultFormated = resultsFormated(result)
     const resultFormatedToTable = resultsFormatedToTable(resultFormated)
 
     return resultFormatedToTable;
