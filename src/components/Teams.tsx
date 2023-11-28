@@ -6,6 +6,8 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKey
 function Teams() {
 
     const [teams, setTeams] = useState<{ EQUIPOS: string }[]>([])
+    const [loading, setLoading] = useState(true)
+
 
     const columns = [
         { key: "EQUIPOS", label: "Equipos" },
@@ -15,11 +17,15 @@ function Teams() {
         const fetchTeams = async () => {
             const newTeams = await getTeams()
             setTeams(newTeams)
+            setLoading(false)
         }
 
         fetchTeams()
     }, [])
 
+    if (loading) {
+        return <Spinner />
+      }
     return (
         <div className='mt-3 grid justify-center'>
             <Table aria-label="Example table with dynamic content">

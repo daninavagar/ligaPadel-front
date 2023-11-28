@@ -2,12 +2,14 @@ import React from "react"
 import { useState, useEffect } from "react"
 // import { Spinner } from "@nextui-org/react"
 import { getPlayers } from "../services/getTeams"
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue} from "@nextui-org/react";
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Spinner} from "@nextui-org/react";
 
 
 function Players() {
 
     const [players, setPlayers] = useState<any>([])
+    const [loading, setLoading] = useState(true)
+
 
     const columns = [
         {
@@ -27,12 +29,16 @@ function Players() {
     useEffect(() => {
         const fetchPlayers = async () => {
             const newPlayers = await getPlayers();
-            console.log(newPlayers);
             setPlayers(newPlayers);
+            setLoading(false)
         };
 
         fetchPlayers();
     }, [])
+
+    if (loading) {
+        return <Spinner />
+      }
     return (
         <div className="mt-3 grid justify-center">
 <Table aria-label="Example table with dynamic content">

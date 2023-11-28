@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const getClasification = async () => {
+export const getClasification = async () => {
 
     let result:any = []
     if (import.meta.env.VITE_ENVIROMENT === 'dev') {
@@ -8,33 +8,29 @@ const getClasification = async () => {
     } else {
 
         const url = `${import.meta.env.VITE_APP_URL_BACK}clasification`
-    
-        const options = {
-            method: 'GET',
-            url: url
+
+        try {
+            const response = await axios.get(url)
+            result = response.data
+            
+        } catch (error) {
+            result = error
+            console.error('There was a problem with the axios request: ', error)
         }
-        let result
-        await axios.request(options)
-            .then((response) => {
-                debugger;
-                console.log(response.data);
-                result = response.data;
-            })
-            .catch((error) => {
-                result = error 
-                console.error(error)
-            })
     }
 
+
     
+    // debugger
     const resultFormated = resultsFormated(result)
     const resultFormatedToTable = resultsFormatedToTable(resultFormated)
-
     return resultFormatedToTable;
+
+
 
 }
 
-const resultsFormated =  (format:any) => {
+export const resultsFormated = (format:[]) => {
     return format.map((item:any) => {
         const newItem = { ...item };
         delete newItem['3' as keyof typeof newItem];
@@ -43,7 +39,7 @@ const resultsFormated =  (format:any) => {
 
 }
 
-const resultsFormatedToTable = ((format:any) => {
+export const resultsFormatedToTable = ((format:any) => {
     return format.map((item:any, index:any) => ({
         key: (index + 1).toString(),
         equipos: item.EQUIPOS,
@@ -64,9 +60,9 @@ const result2 = [
     {
         "3": "",
         "EQUIPOS": "Percutidores",
-        "PUNTOS": "2",
-        "GANADOS": "2",
-        "JUEGOS GANADOS": "4"
+        "PUNTOS": "3",
+        "GANADOS": "3",
+        "JUEGOS GANADOS": "6"
     },
     {
         "3": "",
@@ -80,7 +76,7 @@ const result2 = [
         "EQUIPOS": "Maularen",
         "PUNTOS": "1",
         "GANADOS": "1",
-        "JUEGOS GANADOS": "3"
+        "JUEGOS GANADOS": "4"
     },
     {
         "3": "",
@@ -92,9 +88,9 @@ const result2 = [
     {
         "3": "",
         "EQUIPOS": "Entrenadorrrr A",
-        "PUNTOS": "0",
-        "GANADOS": "0",
-        "JUEGOS GANADOS": "1"
+        "PUNTOS": "1",
+        "GANADOS": "1",
+        "JUEGOS GANADOS": "3"
     },
     {
         "3": "",
@@ -108,10 +104,6 @@ const result2 = [
         "EQUIPOS": "Tom Y Jerry",
         "PUNTOS": "0",
         "GANADOS": "0",
-        "JUEGOS GANADOS": "0"
+        "JUEGOS GANADOS": "1"
     }
 ]
-
-
-
-export default getClasification;

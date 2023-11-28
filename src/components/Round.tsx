@@ -8,12 +8,6 @@ function Round() {
   const nRounds = parseInt(import.meta.env.VITE_APP_N_ROUND)
   const rounds = Array.from({length: nRounds}, (_, i) => i + 1)
 
-  // const [roundImages, setImages] = useState<string[]>([]);
-
-  // useEffect(() => {
-  //   setImages([round_1, round_2, round_3,round_1, round_2, round_3,round_1, round_2, round_3]);
-  // }, []);
-
   return (
     <div className="mt-2 grid justify-center">
       <Tabs className="mt-2 grid justify-center">

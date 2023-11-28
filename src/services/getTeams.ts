@@ -43,7 +43,6 @@ export const getTeams = async () => {
         
         await axios.request(options)
             .then((response) => {
-                console.log(response.data)
                 result = response.data
             })
             .catch((error) => {
