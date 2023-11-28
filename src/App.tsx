@@ -1,18 +1,14 @@
-import Clasification from './components/Clasification'
-import Round from './components/Round'
-import { Tabs,Tab } from '@nextui-org/tabs'
+import React from "react";
+import TabsComponent from './components/TabsComponent'
 import './App.css'
 
 function App() {
 
   return (
     <main>
-      <h1 className='text-5xl'>Liga de Padel</h1>
-      <br />
-      <Tabs>
-        <Tab title='Clasificación'><Clasification/></Tab>
-        <Tab title='Jornadas'><Round/></Tab>
-      </Tabs>
+      {/* <Router> */}
+      <h1 className="text-5xl">EGUL</h1>
+      <TabsComponent/>
     </main>
   )
 }
