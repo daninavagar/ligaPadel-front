@@ -24,8 +24,8 @@ export const getClasification = async () => {
     // debugger
     const resultFormated = resultsFormated(result)
     const resultFormatedToTable = resultsFormatedToTable(resultFormated)
-    return resultFormatedToTable;
 
+    return resultFormatedToTable.sort((a:any, b:any) => parseInt(b.puntos) - parseInt(a.puntos));
 
 
 }
