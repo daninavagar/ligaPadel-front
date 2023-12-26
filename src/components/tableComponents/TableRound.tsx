@@ -18,7 +18,7 @@ const TableRound = ({ roundParameter }: { roundParameter: number }) => {
             const newRound = await getRound(roundParameter)
             setRound(newRound)
             setLoading(false)
-        }
+                    }
 
         fetchRound()
     },[])
