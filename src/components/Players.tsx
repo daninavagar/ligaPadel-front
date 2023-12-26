@@ -59,3 +59,84 @@ function Players() {
 }
 
 export default Players;
+
+// import React from "react";
+// import { useState, useEffect } from "react";
+// import { getPlayers } from "../services/getTeams";
+// import {
+//   Table,
+//   TableHeader,
+//   TableColumn,
+//   TableBody,
+//   TableRow,
+//   TableCell,
+//   getKeyValue,
+//   Spinner,
+// } from "@nextui-org/react";
+// import { IconKing, IconCaptain } from "./IconKing";
+
+// function Players() {
+//   const [players, setPlayers] = useState<any>([]);
+//   const [loading, setLoading] = useState(true);
+
+//   const columns = [
+//     {
+//       key: "EQUIPOS",
+//       label: "EQUIPOS",
+//     },
+//     {
+//       key: "JUGADORES",
+//       label: "JUGADORES",
+//     },
+//     {
+//       key: "CAPITAN",
+//       label: "CAPITAN",
+//     },
+//   ];
+
+//   useEffect(() => {
+//     const fetchPlayers = async () => {
+//       const newPlayers = await getPlayers();
+//       const playersWithIcons = newPlayers.map((player: { CAPITAN: string; }) => ({
+//         ...player,
+//         CAPITAN: player.CAPITAN === '1' ? <IconCaptain/> : ''
+//     }));
+//       setPlayers(playersWithIcons);
+//       setLoading(false);
+//       console.log(newPlayers);
+//     };
+
+//     fetchPlayers();
+//   }, []);
+
+//   if (loading) {
+//     return <Spinner />;
+//   }
+
+//   return (
+//     <div className="mt-3 grid justify-center">
+//       <Table aria-label="Example table with dynamic content">
+//         <TableHeader columns={columns}>
+//           {(column) => (
+//             <TableColumn className="text-center" key={column.key}>
+//               {column.label}
+//             </TableColumn>
+//           )}
+//         </TableHeader>
+//         <TableBody items={players}>
+//           {(item: { EQUIPOS: string; JUGADORES: string; CAPITAN: Boolean }) => (
+//             <TableRow key={item.JUGADORES}>
+//               {(columnKey) => (
+//                 <TableCell className="text-black">
+//                   {getKeyValue(item, columnKey)}
+//                 </TableCell>
+//               )}
+//             </TableRow>
+//           )}
+//         </TableBody>
+//       </Table>
+//     </div>
+//   );
+// }
+
+// export default Players;

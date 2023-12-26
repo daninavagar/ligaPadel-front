@@ -3,8 +3,10 @@ import axios from 'axios'
 export const getClasification = async () => {
 
     let result:any = []
+    let resultFormated = []
     if (import.meta.env.VITE_ENVIROMENT === 'dev') {
        result = result2
+       resultFormated = resultsFormated(result)
     } else {
 
         const url = `${import.meta.env.VITE_APP_URL_BACK}clasification`
@@ -12,17 +14,14 @@ export const getClasification = async () => {
         try {
             const response = await axios.get(url)
             result = response.data
+            resultFormated = resultsFormated(result)
+
             
         } catch (error) {
-            result = error
             console.error('There was a problem with the axios request: ', error)
+            return error
         }
     }
-
-
-    
-    // debugger
-    const resultFormated = resultsFormated(result)
     const resultFormatedToTable = resultsFormatedToTable(resultFormated)
 
     return resultFormatedToTable.sort((a:any, b:any) => parseInt(b.puntos) - parseInt(a.puntos));
