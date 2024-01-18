@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { getClasification } from "../services/getClasification";
 import TableClasification from "./TableClasification";
 import { Spinner } from "@nextui-org/react";
+import { signInWithOAuth } from "../plugins/supabase";
 
 
 function Clasification() {
@@ -35,7 +36,9 @@ function Clasification() {
 
   useEffect(() => {
 
+    
     const fetchClasification = async () => {
+      // await signInWithOAuth();
 
       try {
         const newClasification = await getClasification()
