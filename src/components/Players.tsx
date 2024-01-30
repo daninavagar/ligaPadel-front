@@ -1,6 +1,4 @@
-import React from "react"
 import { useState, useEffect } from "react"
-// import { Spinner } from "@nextui-org/react"
 import { getPlayers } from "../services/getTeams"
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Spinner} from "@nextui-org/react";
 

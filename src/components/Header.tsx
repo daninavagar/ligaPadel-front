@@ -1,12 +1,11 @@
-// import React from "react";
 import { useState } from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
-import { UserAuth, UserAuthResponse } from "../context/AuthContext";
-import { OAuthResponse, UserAppMetadata } from "@supabase/supabase-js";
+import { UserAuth } from "../context/AuthContext";
+import { UserAppMetadata } from "@supabase/supabase-js";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { user, signOut }:UserAuthResponse = UserAuth();
+  const { user, signOut }:UserAppMetadata = UserAuth();
 
   const menuItems = [
   {

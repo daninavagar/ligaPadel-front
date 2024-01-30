@@ -1,4 +1,3 @@
-import React from 'react'
 import { getRound } from '../../services/getTeams'
 import { Card, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Spinner } from "@nextui-org/react"
 import { useState, useEffect } from 'react'

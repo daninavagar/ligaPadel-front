@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 // import { Image } from "@nextui-org/image";
 // import clasificationImage from '../assets/img/clasification.png'
 import { useState, useEffect } from "react";

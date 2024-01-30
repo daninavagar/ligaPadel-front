@@ -1,6 +1,3 @@
-import React from "react";
-// import { useState, useEffect } from "react";
-// import { Image } from "@nextui-org/image";
 import { Tabs, Tab } from "@nextui-org/tabs"
 import TableRound from './tableComponents/TableRound'
 

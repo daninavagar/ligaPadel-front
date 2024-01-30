@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Input, Button, Link } from "@nextui-org/react"
-import { useState, useMemo } from "react"
-// import { signInWithOAuth, signInWithEmail } from "../plugins/supabase";
+import { Button } from "@nextui-org/react"
 import { UserAuth } from "../context/AuthContext";
 import { UserAppMetadata } from "@supabase/supabase-js";
 
