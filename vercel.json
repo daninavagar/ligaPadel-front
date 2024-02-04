@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "outputDirectory": "dist",
     "builds": [
         {
             "src": "vite.config.js",
@@ -13,7 +16,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/index.html"
+            "dest": "dist/index.html"
         }
     ]
 }
