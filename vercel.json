@@ -15,8 +15,12 @@
     ],
     "routes": [
         {
+            "src": "/api/(.*)",
+            "dest": "https://liga-padel-front-git-develop-daninavagars-projects.vercel.app/api/$1"
+        },
+        {
             "src": "/(.*)",
-            "dest": "dist/index.html"
+            "dest": "/index.html"
         }
     ]
 }
