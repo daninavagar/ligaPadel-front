@@ -6,6 +6,7 @@ import Round from "../components/Round";
 import Teams from "../components/Teams";
 import Login from "../components/Login";
 import Header from "../components/Header";
+import NotFound from "../components/NotFound";
 
 export default function Routers() {
 
@@ -13,6 +14,7 @@ export default function Routers() {
         <div>
             <Header/>
             <Routes>
+                <Route path='*' element={<NotFound />}/>
                 <Route path="/" element={<Home />} />
                 <Route path="/clasification" element={<Clasification />} />
                 <Route path="/round" element={<Round />} />
