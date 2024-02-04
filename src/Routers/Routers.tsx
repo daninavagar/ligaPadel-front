@@ -14,11 +14,11 @@ export default function Routers() {
             <Header/>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="clasification" element={<Clasification />} />
-                <Route path="round" element={<Round />} />
-                <Route path="teams" element={ <Teams /> } />
-                <Route path="players" element={ <Players /> } />
-                <Route path="login" element={ <Login /> } />
+                <Route path="/clasification" element={<Clasification />} />
+                <Route path="/round" element={<Round />} />
+                <Route path="/teams" element={ <Teams /> } />
+                <Route path="/players" element={ <Players /> } />
+                <Route path="/login" element={ <Login /> } />
             </Routes>
         </div>
     )
