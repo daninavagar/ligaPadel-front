@@ -35,8 +35,6 @@ function Clasification() {
 
   useEffect(() => {
     const fetchClasification = async () => {
-      // await signInWithOAuth();
-
       try {
         const newClasification = await getClasification()
         setRows(newClasification)
